@@ -34,8 +34,11 @@
 
     +	맨 왼쪽 '<<'를 누른 경우, 이전 디렉토리로 돌아감
 
-    + <img src="https://user-images.githubusercontent.com/76245273/111914112-14a47280-8ab4-11eb-9f81-4024c94a21f4.png" width="30"> 이미지파일 아이콘을 누른 경우 해당 파일의 filePath 값을 이용해 이미지를 보여줌
+
 
 
 6. <img src="https://user-images.githubusercontent.com/76245273/111914112-14a47280-8ab4-11eb-9f81-4024c94a21f4.png" width="30"> 이미지파일 아이콘을 클릭한 경우
-    + modal을 구현하여 esc를 누르거나 사진 영역 밖을 클릭했을 때 이미지를 닫음
+     
+     + <img src="https://user-images.githubusercontent.com/76245273/111914112-14a47280-8ab4-11eb-9f81-4024c94a21f4.png" width="30"> 이미지파일 아이콘을 누른 경우 해당 파일의 filePath 값을 이용해 이미지를 보여줌
+     
+     + modal을 구현하여 esc를 누르거나 사진 영역 밖을 클릭했을 때 이미지를 닫음
