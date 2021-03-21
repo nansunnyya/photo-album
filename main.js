@@ -18,7 +18,7 @@ async function loadJson(num) {
     
     let localSaveChk = localStorage.getItem(location);
     console.log("localSaveChk",localSaveChk)
-    document.querySelector(".Nodes").innerHTML="load";
+    document.querySelector(".Nodes").innerHTML="<font size='5px' text-align='right'>Loading....</font>";
     if(localSaveChk !== null){
         console.log("====local");
         displayItems(localSaveChk,rootChk,"l");
