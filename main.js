@@ -1,8 +1,10 @@
 let dir = [];
 loadJson();
+
 function save(data, vn) {
   localStorage.setItem(vn, JSON.stringify(data));
 }
+
 async function loadJson(num) {
   let url = "https://zl3m4qq0l9.execute-api.ap-northeast-2.amazonaws.com/dev";
   let rootChk = true;
@@ -17,7 +19,7 @@ async function loadJson(num) {
   }
 
   let localSaveChk = localStorage.getItem(location);
-  console.log("localSaveChk", localSaveChk);
+
   document.querySelector(".Nodes").innerHTML =
     "<font size='5px' text-align='right'>Loading....</font>";
   if (localSaveChk !== null) {
@@ -27,23 +29,13 @@ async function loadJson(num) {
     console.log("====fetch");
     await fetch(url)
       .then((res) => {
-        // response 처리
-
-        console.log(res);
-        // 응답을 JSON 형태로 파싱
         return res.json();
       })
       .then((data) => {
-        // json 출력
-        console.log(data);
-        console.log("url", url, rootChk);
-
         save(data, rootChk ? "main" : num);
-
         displayItems(data, rootChk, "f");
       })
       .catch((err) => {
-        // error 처리
         console.log("Fetch Error", err);
       });
   }
@@ -53,15 +45,17 @@ function displayNav(name, id) {
   const subject = document.querySelector(".Breadcrumb");
   let div = document.createElement("div");
   let textnode = document.createTextNode(`- ${name}`);
-  div.appendChild(textnode);
 
+  div.appendChild(textnode);
   dir.push(id);
+
   subject.appendChild(div);
 }
 
 function displayRemNav(name) {
   const subject = document.querySelector(".Breadcrumb");
   let last = subject.lastChild;
+
   dir.pop();
 
   subject.removeChild(last);
@@ -74,12 +68,12 @@ function displayItems(data, rootChk, type) {
     data = JSON.parse(data);
   }
 
-  console.log(data);
   let prev = "";
   if (!rootChk) {
     prev = `<div class="Node" onclick="displayRemNav();">
     <img src="./assets/prev.png" ></div>`;
   }
+
   container.innerHTML =
     prev + data.map((item) => createHTMLString(item)).join("");
 }
@@ -96,11 +90,10 @@ function createHTMLString(item) {
     <div>${item.name}</div>
     </div>`;
   } else {
-    //${item.id}<div class="Node" onclick="displayNav('${item.name}',${item.id}); loadJson(${item.id});">
     return `<div class="Node" onclick="displayNav('${item.name}',${item.id}); loadJson(${item.id});">
     ${img}  
     <div>${item.name}</div>
-</div>`;
+    </div>`;
   }
 }
 
