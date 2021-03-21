@@ -1,9 +1,9 @@
 # photo-album 만들기
 **Test**: https://nansunnyya.github.io/photo-album
 
-****기능구현****
+# 기능구현
 
-1. root 경로 탐색 중인 경우
+## 1. root 경로 탐색 중인 경우
 
 •	디렉토리를 클릭한 경우 해당 디렉토리 하위에 속한 디렉토리 / 파일들을 불러와 렌더링
 
@@ -16,8 +16,9 @@
 
 <img src="https://user-images.githubusercontent.com/76245273/111914063-e757c480-8ab3-11eb-9888-c976277a559f.png" width="500"> 
 
-2. root의 하위 영역을 탐색중인 경우
 
-•	맨 왼쪽 '<<'를 누른 경우, 이전 디렉토리로 돌아감
+## 2. root의 하위 영역을 탐색중인 경우
 
-•	<img src="https://user-images.githubusercontent.com/76245273/111914112-14a47280-8ab4-11eb-9f81-4024c94a21f4.png" width="30"> 이미지파일 아이콘을 누른 경우 해당 파일의 filePath 값을 이용해 이미지를 보여줌
+  +•	맨 왼쪽 '<<'를 누른 경우, 이전 디렉토리로 돌아감
+
+  +•	<img src="https://user-images.githubusercontent.com/76245273/111914112-14a47280-8ab4-11eb-9f81-4024c94a21f4.png" width="30"> 이미지파일 아이콘을 누른 경우 해당 파일의 filePath 값을 이용해 이미지를 보여줌
