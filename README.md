@@ -1,5 +1,3 @@
-API를 활용한 photo-album
-
 ✔API를 활용한 photo-album 만들기(with Vanilla javascript)
 ------------
 
