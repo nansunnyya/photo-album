@@ -1,4 +1,4 @@
-✔photo-album 만들기
+✔AIP를 활용한 photo-album 만들기
 ------------
 
 ### 🖱Test: https://nansunnyya.github.io/photo-album
